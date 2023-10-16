@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"strings"
 )
 
@@ -88,7 +89,7 @@ func getRequestUrl() string {
 }
 
 func getAuthToken() string {
-	return "ya29.a0AfB_byAno_Fu8Pjgmrg2faHU5bzk-nSlfd-kppth7EmU1k-5dxXGJVpBmqkmF0cJl8M688TXxCCoITIS_GK4k_bVLc8VHtqDdPW5xrZGUzVFFKoit5V1wQchnmOIcO5FTwgdI27YlczLLwHNljpkxCG-zO9koWdg_WWXW7i2CvUaCgYKAbcSARESFQGOcNnCrlZ40z3owojC4AnzWpcSLA0178"
+	return os.Getenv("GOOGLE_AUTH_TOKEN")
 }
 
 func buildResponse(documentResponse string) string {
