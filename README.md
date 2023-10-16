@@ -9,14 +9,18 @@ To run the application, you need to follow these steps:
 
 1. **Install Golang:** Make sure you have Go installed on your system. If not, you can download it from [here](https://go.dev/doc/install).
 
-2. **Navigate to the Application Directory:** Open your terminal and navigate to the directory of the application using the `cd` command:
+2. use this gcloud cli `gcloud auth print-access-token` to generate an access token 
+
+3. Add the GOOGLE_AUTH_TOKEN environment variable to your server and set it's value to the generated access token
+
+4. **Navigate to the Application Directory:** Open your terminal and navigate to the directory of the application using the `cd` command:
    
    ```sh
    cd path/to/the/application
 
-3. Install the dependencies by running `go get .` in the terminal.
+5. Install the dependencies by running `go get .` in the terminal.
    
-4. Start the application by running `go run .` in the terminal.
+6. Start the application by running `go run .` in the terminal.
 
 ## Running the tests
 To run the tests:
